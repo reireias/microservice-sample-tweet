@@ -1,3 +1,4 @@
+![test](https://github.com/reireias/microservice-sample-tweet/workflows/test/badge.svg)
 # Microservice Sample Tweet Service
 Tweet service for microservice sample application.
 
