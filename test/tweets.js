@@ -57,6 +57,10 @@ test.afterEach.always(async () => {
   await Tweet.deleteMany().exec()
 })
 
+test.after(async () => {
+  await mongod.stop()
+})
+
 // GET /tweets
 test.serial('get tweets', async t => {
   const res = await supertest(app).get('/tweets')

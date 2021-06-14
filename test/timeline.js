@@ -39,6 +39,10 @@ test.afterEach.always(async () => {
   await Tweet.deleteMany().exec()
 })
 
+test.after(async () => {
+  await mongod.stop()
+})
+
 // POST /timeline
 test.serial('get timeline', async t => {
   const res = await supertest(app)
