@@ -20,8 +20,11 @@ const user1Id = new mongoose.Types.ObjectId()
 const user2Id = new mongoose.Types.ObjectId()
 
 test.before(async () => {
+  console.log('1')
   const uri = await mongod.getConnectionString()
+  console.log('2')
   mongoose.connect(uri, { useNewUrlParser: true })
+  console.log('3')
 })
 
 test.beforeEach(async t => {
