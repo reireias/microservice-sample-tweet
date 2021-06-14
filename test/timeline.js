@@ -22,7 +22,7 @@ const user3Id = new mongoose.Types.ObjectId()
 
 test.before(async () => {
   const uri = await mongod.getConnectionString()
-  mongoose.connect(uri, { useNewUrlParser: true })
+  await mongoose.connect(uri, { useNewUrlParser: true })
 })
 
 test.beforeEach(async t => {
