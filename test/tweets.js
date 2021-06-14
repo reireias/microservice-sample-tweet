@@ -22,6 +22,7 @@ const user2Id = new mongoose.Types.ObjectId()
 test.before(async () => {
   console.log('1')
   const uri = await mongod.getConnectionString()
+  console.log(uri)
   console.log('2')
   mongoose.connect(uri, { useNewUrlParser: true })
   console.log('3')
